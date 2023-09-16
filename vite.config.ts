@@ -1,21 +1,26 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
 
-  cacheDir: "./.vite",
+  cacheDir: './.vite',
 
   /** @see https://vitejs-kr.github.io/config/server-options.html */
   server: {
     port: 3000,
     host: true,
-    open: "/",
+    open: '/',
   },
 
   resolve: {
-    alias: [{ find: "~", replacement: path.resolve(__dirname, "src") }],
+    alias: [
+      {
+        find: '~',
+        replacement: path.resolve(__dirname, 'src'),
+      },
+    ],
   },
 });
