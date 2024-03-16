@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { getSample } from "./apis/getSample";
+import { getSample } from "../apis/getSample";
 
 const App = () => {
   const [isError, setIsError] = useState(false);

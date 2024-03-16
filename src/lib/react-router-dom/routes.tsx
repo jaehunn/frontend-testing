@@ -1,9 +1,7 @@
-import { lazy } from "react";
 import { Navigate, RouteObject } from "react-router-dom";
 
-import AppErrorBoundary from "~/AppErrorBoundary";
-
-const App = lazy(() => import("~/App"));
+import { App } from "~/pages";
+import AppErrorBoundary from "~/pages/AppErrorBoundary";
 
 export const routes: RouteObject[] = [
   {
