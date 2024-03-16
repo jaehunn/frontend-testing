@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
-import App from './App';
+import App from "./App";
 
-vi.mock('axios', async () => {
-  const actual = await vi.importActual('axios');
+vi.mock("axios", async () => {
+  const actual = await vi.importActual("axios");
 
   return {
     ...actual!,
@@ -11,10 +11,10 @@ vi.mock('axios', async () => {
   };
 });
 
-describe('App', () => {
-  it('Default', () => {
+describe("App", () => {
+  it("Default", () => {
     render(<App />);
 
-    expect(screen.getByText('App')).toBeInTheDocument();
+    expect(screen.getByText("App")).toBeInTheDocument();
   });
 });

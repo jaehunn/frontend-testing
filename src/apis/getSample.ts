@@ -1,4 +1,4 @@
-import Http from '.';
+import Http from ".";
 
 type Params = {
   // ...

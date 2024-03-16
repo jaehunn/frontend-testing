@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-import { getSample } from './apis/getSample';
+import { getSample } from "./apis/getSample";
 
 const App = () => {
   useEffect(() => {

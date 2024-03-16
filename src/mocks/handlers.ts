@@ -1,11 +1,11 @@
-import { HttpResponse, http } from 'msw';
+import { HttpResponse, http } from "msw";
 
-import { getSample } from '~/apis/getSample';
+import { getSample } from "~/apis/getSample";
 
 export const handlers = [
-  http.get('/api/sample', () => {
-    const data: Awaited<ReturnType<typeof getSample>>['data'] = {
-      name: 'Jaehun',
+  http.get("/api/sample", () => {
+    const data: Awaited<ReturnType<typeof getSample>>["data"] = {
+      name: "Jaehun",
     };
 
     return HttpResponse.json({
