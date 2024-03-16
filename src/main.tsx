@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "~/reset.css";
 import "~/global.css";
 
-import App from "./App.tsx";
+import { RouterProvider, browserRouter } from "~/lib/react-router-dom";
 
 enableMocking().then(() =>
   ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-      <App />
+      <RouterProvider router={browserRouter()} />
     </React.StrictMode>
   )
 );
