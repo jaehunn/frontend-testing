@@ -5,13 +5,13 @@ type Params = {
 };
 
 type Response = {
-  // ...
+  data: {
+    name: string;
+  };
 };
 
-export const PATH = `/api/sample`;
+export const getSampleUrl = () => `/api/sample` as const;
 
-const getSample = (params?: Params) => {
-  return Http.get<Response>(PATH, params);
+export const getSample = (params?: Params) => {
+  return Http.get<Response>(getSampleUrl(), params);
 };
-
-export default getSample;

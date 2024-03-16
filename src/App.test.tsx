@@ -6,7 +6,7 @@ vi.mock('axios', async () => {
   const actual = await vi.importActual('axios');
 
   return {
-    ...actual,
+    ...actual!,
     get: vi.fn(),
   };
 });

@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/vitest';
 
-import { server } from '~/server/node';
+import { server } from '~/mocks/node';
 
 beforeAll(() =>
   server.listen({
@@ -10,8 +10,11 @@ beforeAll(() =>
 
 afterEach(() => {
   server.resetHandlers();
+
+  vi.clearAllMocks();
 });
 
 afterAll(() => {
   server.close();
+  vi.resetAllMocks();
 });

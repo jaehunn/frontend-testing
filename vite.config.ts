@@ -6,8 +6,6 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
 
-  cacheDir: './.vite',
-
   /** @see https://vitejs-kr.github.io/config/server-options.html */
   server: {
     port: 3000,

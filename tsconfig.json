@@ -19,6 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
 
     /** Path Alias */
     "baseUrl": "src",
@@ -29,7 +30,7 @@
     /** Type Definitions */
     "types": ["vitest/globals"]
   },
-  "include": ["src", "vitest-setup.ts"],
+  "include": ["src"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
